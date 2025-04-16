@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include <string.h>
 
-// Estrutura da carta
+// Estrutura da carta do Super Trunfo
 typedef struct {
-    char estado;            // Estado representado por uma letra de 'A' a 'H'
-    char codigo[5];         // Código da carta (ex: A01, B03)
-    char nomeCidade[50];    // Nome da cidade
-    int populacao;          // Número de habitantes
-    float area;             // Área em km²
-    float PIB;              // Produto Interno Bruto (bilhões de reais)
-    int pontosTuristicos;   // Número de pontos turísticos
+    char estado[20];       // Estado representado por nome completo
+    char codigo[5];        // Código da carta (ex: A01, B03)
+    char nomeCidade[50];   // Nome da cidade
+    int populacao;         // Número de habitantes
+    float area;            // Área em km²
+    float PIB;             // Produto Interno Bruto (bilhões de reais)
+    int pontosTuristicos;  // Número de pontos turísticos
 } CartaSuperTrunfo;
 
 int main() {
@@ -17,7 +17,7 @@ int main() {
     CartaSuperTrunfo carta1, carta2;
 
     // Inicialização da primeira carta
-    carta1.estado = 'A';
+    strcpy(carta1.estado, "Paraná");
     strcpy(carta1.codigo, "A1");
     strcpy(carta1.nomeCidade, "Curitiba");
     carta1.populacao = 3559366;
@@ -26,7 +26,7 @@ int main() {
     carta1.pontosTuristicos = 59;
 
     // Inicialização da segunda carta
-    carta2.estado = 'B';
+    strcpy(carta2.estado, "Minas Gerais");
     strcpy(carta2.codigo, "B1");
     strcpy(carta2.nomeCidade, "Belo Horizonte");
     carta2.populacao = 21322691;
@@ -38,7 +38,7 @@ int main() {
     printf("\n🔥 Informações das Cartas 🔥\n");
 
     printf("\n🔹 Carta 1\n");
-    printf("Estado: %c\n", carta1.estado);
+    printf("Estado: %s\n", carta1.estado);
     printf("Código: %s\n", carta1.codigo);
     printf("Nome da Cidade: %s\n", carta1.nomeCidade);
     printf("População: %d habitantes\n", carta1.populacao);
@@ -47,7 +47,7 @@ int main() {
     printf("Número de Pontos Turísticos: %d\n", carta1.pontosTuristicos);
 
     printf("\n🔹 Carta 2\n");
-    printf("Estado: %c\n", carta2.estado);
+    printf("Estado: %s\n", carta2.estado);
     printf("Código: %s\n", carta2.codigo);
     printf("Nome da Cidade: %s\n", carta2.nomeCidade);
     printf("População: %d habitantes\n", carta2.populacao);
