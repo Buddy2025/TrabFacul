@@ -24,5 +24,24 @@ int main() {
         k++;
     } while (k < 8);
 
+    // Movimento do Cavalo: 2 casas para baixo e 1 casa para esquerda OU direita
+    // Usando for externo + while interno
+    printf("\n"); // Linha em branco separando o movimento do Cavalo
+    printf("Movimento do Cavalo:\n");
+
+    for (int l = 0; l < 2; l++) {
+        int passosBaixo = 0;
+        while (passosBaixo < 2) {
+            printf("Baixo\n");
+            passosBaixo++;
+        }
+
+        if (l == 0) {
+            printf("Esquerda\n");
+        } else {
+            printf("Direita\n");
+        }
+    }
+
     return 0;
 }
